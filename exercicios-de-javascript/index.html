@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Desafios JavaScript</h1>
+            <p>if/else, switch/case e operadores lógicos</p>
+        </header>
+
+        <div class="grid">
+
+            <section class="painel">
+                <span class="numero">01</span>
+                <h2>Verificador de Idade</h2>
+                <p class="legenda">identifica se é maior ou menor de idade</p>
+
+                <label for="idade">idade</label>
+                <input type="number" id="idade" placeholder="ex: 18">
+
+                <button onclick="verificarIdade()">Verificar</button>
+
+                <p id="resultado-idade" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">02</span>
+                <h2>Número Positivo, Negativo ou Zero</h2>
+                <p class="legenda">classifica o sinal de um número</p>
+
+                <label for="numero">numero</label>
+                <input type="number" id="numero" placeholder="ex: -5">
+
+                <button onclick="verificarNumero()">Verificar</button>
+
+                <p id="resultado-numero" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">03</span>
+                <h2>Aprovação do Aluno</h2>
+                <p class="legenda">avalia a nota final do aluno</p>
+
+                <label for="nota">nota</label>
+                <input type="number" id="nota" placeholder="ex: 6" step="0.1">
+
+                <button onclick="verificarNota()">Verificar</button>
+
+                <p id="resultado-nota" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">04</span>
+                <h2>Sistema de Prioridade</h2>
+                <p class="legenda">analisa a prioridade de uma tarefa</p>
+
+                <label for="prioridade">prioridade</label>
+                <select id="prioridade">
+                    <option value="">selecionar...</option>
+                    <option value="urgente">urgente</option>
+                    <option value="alta">alta</option>
+                    <option value="media">media</option>
+                    <option value="baixa">baixa</option>
+                </select>
+
+                <button onclick="verificarPrioridade()">Verificar</button>
+
+                <p id="resultado-prioridade" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">05</span>
+                <h2>Tarefa Atrasada</h2>
+                <p class="legenda">avalia se a tarefa exige atenção imediata</p>
+
+                <label for="prioridade-tarefa">prioridade</label>
+                <select id="prioridade-tarefa">
+                    <option value="">selecionar...</option>
+                    <option value="urgente">urgente</option>
+                    <option value="alta">alta</option>
+                    <option value="media">media</option>
+                    <option value="baixa">baixa</option>
+                </select>
+
+                <label class="check-label" for="atrasada">
+                    <input type="checkbox" id="atrasada">
+                    <span>tarefa está atrasada</span>
+                </label>
+
+                <button onclick="verificarTarefa()">Verificar</button>
+
+                <p id="resultado-tarefa" class="resultado"></p>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
