@@ -1,103 +1,153 @@
-// 01 - Verificador de Idade
+//---------------------------------------//
+// 01 - Verificador de Idade              //
+//---------------------------------------//
 function verificarIdade() {
     const idade = Number(document.getElementById("idade").value);
-    const resultado = document.getElementById("resultado-idade");
+    const resultadoIdade = document.getElementById("resultado-idade");
 
-    resultado.classList.remove("sucesso", "erro", "aviso");
+    resultadoIdade.classList.remove("sucesso", "erro", "aviso");
 
     if (idade < 0) {
-        resultado.textContent = "Não nascido ainda!";
-        resultado.classList.add("mostrar", "aviso");
+        resultadoIdade.textContent = "Não nascido ainda!";
+        resultadoIdade.classList.add("mostrar", "aviso");
     } else if (idade >= 18) {
-        resultado.textContent = "Maior de idade.";
-        resultado.classList.add("mostrar", "sucesso");
+        resultadoIdade.textContent = "Maior de idade.";
+        resultadoIdade.classList.add("mostrar", "sucesso");
     } else {
-        resultado.textContent = "Menor de idade.";
-        resultado.classList.add("mostrar", "erro");
+        resultadoIdade.textContent = "Menor de idade.";
+        resultadoIdade.classList.add("mostrar", "erro");
     }
 }
 
-// 02 - Número Positivo, Negativo ou Zero
+//---------------------------------------//
+// 02 - Número Positivo, Negativo ou Zero //
+//---------------------------------------//
 function verificarNumero() {
     const numero = Number(document.getElementById("numero").value);
-    const resultado = document.getElementById("resultado-numero");
+    const resultadoNumero = document.getElementById("resultado-numero");
 
-    resultado.classList.remove("positivo", "negativo", "zero");
+    resultadoNumero.classList.remove("positivo", "negativo", "zero");
 
     if (numero > 0) {
-        resultado.textContent = "O número é positivo.";
-        resultado.classList.add("mostrar", "positivo");
+        resultadoNumero.textContent = "O número é positivo.";
+        resultadoNumero.classList.add("mostrar", "positivo");
     } else if (numero < 0) {
-        resultado.textContent = "O número é negativo.";
-        resultado.classList.add("mostrar", "negativo");
+        resultadoNumero.textContent = "O número é negativo.";
+        resultadoNumero.classList.add("mostrar", "negativo");
     } else {
-        resultado.textContent = "O número é igual a zero.";
-        resultado.classList.add("mostrar", "zero");
+        resultadoNumero.textContent = "O número é igual a zero.";
+        resultadoNumero.classList.add("mostrar", "zero");
     }
 }
 
-// 03 - Aprovação do Aluno
+//---------------------------------------//
+// 03 - Aprovação do Aluno                //
+//---------------------------------------//
 function verificarNota() {
     const nota = Number(document.getElementById("nota").value);
-    const resultado = document.getElementById("resultado-nota");
+    const resultadoNota = document.getElementById("resultado-nota");
 
-    resultado.classList.remove("aprovado", "recuperacao", "reprovado");
+    resultadoNota.classList.remove("aprovado", "recuperacao", "reprovado");
 
     if (nota >= 7) {
-        resultado.textContent = "Aprovado";
-        resultado.classList.add("mostrar", "aprovado");
+        resultadoNota.textContent = "Aprovado";
+        resultadoNota.classList.add("mostrar", "aprovado");
     } else if (nota >= 5) {
-        resultado.textContent = "Recuperação";
-        resultado.classList.add("mostrar", "recuperacao");
+        resultadoNota.textContent = "Recuperação";
+        resultadoNota.classList.add("mostrar", "recuperacao");
     } else {
-        resultado.textContent = "Reprovado";
-        resultado.classList.add("mostrar", "reprovado");
+        resultadoNota.textContent = "Reprovado";
+        resultadoNota.classList.add("mostrar", "reprovado");
     }
 }
 
-// 04 - Sistema de Prioridade
+//---------------------------------------//
+// 04 - Sistema de Prioridade             //
+//---------------------------------------//
 function verificarPrioridade() {
     const prioridade = document.getElementById("prioridade").value;
-    const resultado = document.getElementById("resultado-prioridade");
+    const resultadoPrioridade = document.getElementById("resultado-prioridade");
 
-    resultado.classList.remove("urgente", "alta", "media", "baixa", "desconhecida");
+    resultadoPrioridade.classList.remove("urgente", "alta", "media", "baixa", "desconhecida");
 
     switch (prioridade) {
         case "urgente":
-            resultado.textContent = "Atenção redobrada!";
-            resultado.classList.add("mostrar", "urgente");
+            resultadoPrioridade.textContent = "Atenção redobrada!";
+            resultadoPrioridade.classList.add("mostrar", "urgente");
             break;
         case "alta":
-            resultado.textContent = "Prioridade alta.";
-            resultado.classList.add("mostrar", "alta");
+            resultadoPrioridade.textContent = "Prioridade alta.";
+            resultadoPrioridade.classList.add("mostrar", "alta");
             break;
         case "media":
-            resultado.textContent = "Prioridade média.";
-            resultado.classList.add("mostrar", "media");
+            resultadoPrioridade.textContent = "Prioridade média.";
+            resultadoPrioridade.classList.add("mostrar", "media");
             break;
         case "baixa":
-            resultado.textContent = "Prioridade baixa.";
-            resultado.classList.add("mostrar", "baixa");
+            resultadoPrioridade.textContent = "Prioridade baixa.";
+            resultadoPrioridade.classList.add("mostrar", "baixa");
             break;
         default:
-            resultado.textContent = "Prioridade desconhecida.";
-            resultado.classList.add("mostrar", "desconhecida");
+            resultadoPrioridade.textContent = "Prioridade desconhecida.";
+            resultadoPrioridade.classList.add("mostrar", "desconhecida");
     }
 }
 
-// 05 - Tarefa Atrasada
+//---------------------------------------//
+// 05 - Tarefa Atrasada                   //
+//---------------------------------------//
 function verificarTarefa() {
     const prioridade = document.getElementById("prioridade-tarefa").value;
     const atrasada = document.getElementById("atrasada").checked;
-    const resultado = document.getElementById("resultado-tarefa");
+    const resultadoTarefa = document.getElementById("resultado-tarefa");
 
-    resultado.classList.remove("alerta", "calmo");
+    resultadoTarefa.classList.remove("alerta", "calmo");
 
     if (prioridade === "urgente" || (prioridade === "alta" && atrasada)) {
-        resultado.textContent = "Precisa de atenção agora!";
-        resultado.classList.add("mostrar", "alerta");
+        resultadoTarefa.textContent = "Precisa de atenção agora!";
+        resultadoTarefa.classList.add("mostrar", "alerta");
     } else {
-        resultado.textContent = "Pode aguardar.";
-        resultado.classList.add("mostrar", "calmo");
+        resultadoTarefa.textContent = "Pode aguardar.";
+        resultadoTarefa.classList.add("mostrar", "calmo");
     }
+}
+
+//---------------------------------------//
+// 06 - Sistema de Login                  //
+//---------------------------------------//
+function verificarLogin(){
+    const resultadoLogin = document.getElementById("resultado-login");
+    const usuarioDigitado = document.getElementById("usuario").value;
+    const senhaDigitada = document.getElementById("senha").value;
+    const usuario = "admin";
+    const senha = "1234";
+
+    resultadoLogin.classList.remove("sucesso", "alerta", "aviso");
+
+    if(usuarioDigitado === usuario && senhaDigitada === senha){
+        resultadoLogin.textContent = "Login realizado com sucesso!";
+        resultadoLogin.classList.add("mostrar", "sucesso")
+    }
+    else if(usuarioDigitado === usuario && senhaDigitada !== senha){
+        resultadoLogin.textContent = "Senha incorreta.";
+        resultadoLogin.classList.add("mostrar", "aviso");
+    }
+    else{
+        resultadoLogin.textContent = "Usuário não encontrado.";
+        resultadoLogin.classList.add("mostrar", "erro");
+    }
+};
+
+//---------------------------------------//
+// 07 - Ternário                          //
+//---------------------------------------//
+function verificarTernario(){
+    const idadeTernario = document.getElementById("idade-ternario");
+    const resultadoTernario = document.getElementById("resultado-ternario")
+    const idade = Number(document.getElementById("idade-ternario").value);
+
+    const situacao = idade >= 18 ? "Maior de idade" : "Menor de idade"
+    resultadoTernario.classList.remove("sucesso", "erro");
+    resultadoTernario.textContent = situacao;
+    resultadoTernario.classList.add("mostrar", idade >=18 ? "sucesso" : "erro");
 }
