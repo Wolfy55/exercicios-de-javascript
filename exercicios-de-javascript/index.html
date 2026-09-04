@@ -14,8 +14,8 @@
             <p>if/else, switch/case e operadores lógicos</p>
         </header>
 
-        <!--Atividade 01-->
         <div class="grid">
+
             <section class="painel">
                 <span class="numero">01</span>
                 <h2>Verificador de Idade</h2>
@@ -29,7 +29,6 @@
                 <p id="resultado-idade" class="resultado"></p>
             </section>
 
-            <!--Atividade 02-->
             <section class="painel">
                 <span class="numero">02</span>
                 <h2>Número Positivo, Negativo ou Zero</h2>
@@ -43,7 +42,6 @@
                 <p id="resultado-numero" class="resultado"></p>
             </section>
 
-            <!--Atividade 03-->
             <section class="painel">
                 <span class="numero">03</span>
                 <h2>Aprovação do Aluno</h2>
@@ -57,7 +55,6 @@
                 <p id="resultado-nota" class="resultado"></p>
             </section>
 
-            <!--Atividade 04-->
             <section class="painel">
                 <span class="numero">04</span>
                 <h2>Sistema de Prioridade</h2>
@@ -77,7 +74,6 @@
                 <p id="resultado-prioridade" class="resultado"></p>
             </section>
 
-            <!--Atividade 05-->
             <section class="painel">
                 <span class="numero">05</span>
                 <h2>Tarefa Atrasada</h2>
@@ -106,30 +102,118 @@
                 <span class="numero">06</span>
                 <h2>Login Simples</h2>
                 <p class="legenda">verifica usuário e senha</p>
- 
+
                 <label for="usuario">usuario</label>
                 <input type="text" id="usuario" placeholder="ex: admin">
- 
+
                 <label for="senha">senha</label>
-                    <input type="password" id="senha" placeholder="ex: 1234">
- 
+                <input type="password" id="senha" placeholder="ex: 1234">
+
                 <button onclick="verificarLogin()">Verificar</button>
- 
+
                 <p id="resultado-login" class="resultado"></p>
             </section>
 
-                   <section class="painel">
+            <section class="painel">
                 <span class="numero">07</span>
                 <h2>Ternário</h2>
                 <p class="legenda">maior ou menor de idade, em uma linha</p>
- 
+
                 <label for="idade-ternario">idade</label>
                 <input type="number" id="idade-ternario" placeholder="ex: 20">
- 
+
                 <button onclick="verificarTernario()">Verificar</button>
- 
+
                 <p id="resultado-ternario" class="resultado"></p>
             </section>
+
+            <section class="painel">
+                <span class="numero">08</span>
+                <h2>Sistema de Desconto</h2>
+                <p class="legenda">calcula o valor final da compra</p>
+
+                <label for="valor-compra">valorCompra</label>
+                <input type="number" id="valor-compra" placeholder="ex: 350">
+
+                <label class="check-label" for="cliente-vip">
+                    <input type="checkbox" id="cliente-vip">
+                    <span>cliente VIP</span>
+                </label>
+
+                <button onclick="verificarDesconto()">Calcular</button>
+
+                <p id="resultado-desconto" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">09</span>
+                <h2>Validação de Tarefa</h2>
+                <p class="legenda">marca uma tarefa como concluída</p>
+
+                <p class="tarefa-info">
+                    titulo: <strong>Estudar JavaScript</strong><br>
+                    concluida: <strong id="status-tarefa9">false</strong>
+                </p>
+
+                <button onclick="testarMarcarComoConcluida()">marcarComoConcluida(tarefa)</button>
+                <button class="secundario" onclick="reiniciarTarefa9()">reiniciar tarefa</button>
+
+                <p id="resultado-tarefa9" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">10</span>
+                <h2>Sistema de Atendimento</h2>
+                <p class="legenda">roteia o atendimento pela opção escolhida</p>
+
+                <label for="opcao">opcao</label>
+                <select id="opcao">
+                    <option value="">selecionar...</option>
+                    <option value="1">1 - Consultar pedido</option>
+                    <option value="2">2 - Cancelar pedido</option>
+                    <option value="3">3 - Falar com atendente</option>
+                    <option value="4">4 - Encerrar atendimento</option>
+                </select>
+
+                <label class="check-label" for="cliente-vip-10">
+                    <input type="checkbox" id="cliente-vip-10">
+                    <span>cliente VIP</span>
+                </label>
+
+                <button onclick="verificarAtendimento()">Verificar</button>
+
+                <p id="resultado-atendimento" class="resultado"></p>
+            </section>
+
+            <section class="painel">
+                <span class="numero">Extra</span>
+                <h2>Gerenciamento de Tarefas</h2>
+                <p class="legenda">combina todos os conceitos estudados</p>
+
+                <label for="prioridade-extra">prioridade</label>
+                <select id="prioridade-extra">
+                    <option value="">selecionar...</option>
+                    <option value="urgente">urgente</option>
+                    <option value="alta">alta</option>
+                    <option value="media">media</option>
+                    <option value="baixa">baixa</option>
+                </select>
+
+                <label class="check-label" for="atrasada-extra">
+                    <input type="checkbox" id="atrasada-extra">
+                    <span>tarefa está atrasada</span>
+                </label>
+
+                <label class="check-label" for="concluida-extra">
+                    <input type="checkbox" id="concluida-extra">
+                    <span>tarefa está concluída</span>
+                </label>
+
+                <button onclick="testarGerenciamentoTarefa()">Verificar</button>
+
+                <p id="resultado-extra" class="resultado"></p>
+            </section>
+
         </div>
     </main>
 
